@@ -32,12 +32,15 @@
             this.lblInventory = new System.Windows.Forms.Label();
             this.tcInventory = new System.Windows.Forms.TabControl();
             this.tpManagment = new System.Windows.Forms.TabPage();
+            this.elementHostInventoryEditor = new System.Windows.Forms.Integration.ElementHost();
+            this.inventoryEditor1 = new VirtualShoppingMall.Views.Business_Account.InventoryEditor.InventoryEditor();
             this.tpStatus = new System.Windows.Forms.TabPage();
             this.tlpStatus = new System.Windows.Forms.TableLayoutPanel();
             this.lblLowInventory = new System.Windows.Forms.Label();
             this.lblDepletionRate = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tcInventory.SuspendLayout();
+            this.tpManagment.SuspendLayout();
             this.tpStatus.SuspendLayout();
             this.tlpStatus.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +85,7 @@
             // 
             // tpManagment
             // 
+            this.tpManagment.Controls.Add(this.elementHostInventoryEditor);
             this.tpManagment.Location = new System.Drawing.Point(4, 25);
             this.tpManagment.Name = "tpManagment";
             this.tpManagment.Padding = new System.Windows.Forms.Padding(3);
@@ -89,6 +93,17 @@
             this.tpManagment.TabIndex = 0;
             this.tpManagment.Text = "Management";
             this.tpManagment.UseVisualStyleBackColor = true;
+            // 
+            // elementHostInventoryEditor
+            // 
+            this.elementHostInventoryEditor.AutoSize = true;
+            this.elementHostInventoryEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHostInventoryEditor.Location = new System.Drawing.Point(3, 3);
+            this.elementHostInventoryEditor.Name = "elementHostInventoryEditor";
+            this.elementHostInventoryEditor.Size = new System.Drawing.Size(380, 326);
+            this.elementHostInventoryEditor.TabIndex = 0;
+            this.elementHostInventoryEditor.Text = "Inventory Editor";
+            this.elementHostInventoryEditor.Child = this.inventoryEditor1;
             // 
             // tpStatus
             // 
@@ -150,6 +165,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tcInventory.ResumeLayout(false);
+            this.tpManagment.ResumeLayout(false);
+            this.tpManagment.PerformLayout();
             this.tpStatus.ResumeLayout(false);
             this.tlpStatus.ResumeLayout(false);
             this.tlpStatus.PerformLayout();
@@ -167,6 +184,8 @@
         private System.Windows.Forms.TableLayoutPanel tlpStatus;
         private System.Windows.Forms.Label lblLowInventory;
         private System.Windows.Forms.Label lblDepletionRate;
+        private System.Windows.Forms.Integration.ElementHost elementHostInventoryEditor;
+        private InventoryEditor.InventoryEditor inventoryEditor1;
 
     }
 }

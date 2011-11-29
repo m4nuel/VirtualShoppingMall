@@ -17,6 +17,12 @@ namespace VirtualShoppingMall.Views.Business_Account
         public BusinessStartPage()
         {
             InitializeComponent();
+            this.startWizard1.finishClickEvent += new StartWizard.FinishClickHandler(startWizard1_finishClickEvent);
+        }
+
+        void startWizard1_finishClickEvent(object sender, EventArgs e)
+        {
+            this.raisePageSelectionEvent(PageKeyTitles.HOME_PAGE);
         }
 
         private void raisePageSelectionEvent(KeyValuePair<String, String> selectedPage)
@@ -32,14 +38,5 @@ namespace VirtualShoppingMall.Views.Business_Account
             this.raisePageSelectionEvent(PageKeyTitles.HOME_PAGE);
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
